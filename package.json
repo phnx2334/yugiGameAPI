@@ -4,7 +4,7 @@
   "description": "API for mongo database of yugigame",
   "main": "index.js",
   "scripts": {
-    "start": "npm i && tsc && node ./build/server.js",
+    "start": "node ./build/server.js",
     "dev": "nodemon",
     "build": "npm i && tsc",
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -1,0 +1,39 @@
+{
+  "name": "yugigameapi",
+  "version": "1.0.0",
+  "description": "API for mongo database of yugigame",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.ts",
+    "dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phnx2334/yugiGameAPI.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phnx2334/yugiGameAPI/issues"
+  },
+  "homepage": "https://github.com/phnx2334/yugiGameAPI#readme",
+  "dependencies": {
+    "@types/cors": "^2.8.12",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongodb": "^4.1.3",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "^16.11.1",
+    "nodemon": "^2.0.13",
+    "prettier": "^2.4.1",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.4.4"
+  }
+}

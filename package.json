@@ -8,7 +8,9 @@
     "dev": "nodemon",
     "build": "npm i && tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
+    "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write",
+    "tsc": "tsc",
+    "postinstall": "npm run tsc"
   },
   "repository": {
     "type": "git",

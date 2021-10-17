@@ -9,7 +9,7 @@ connectToDatabase()
     .then(() => {
         app.use("/cards", cardsRouter);
 
-        app.listen(port, () => {
+        app.listen(process.env.PORT || 81, () => {
             console.log(`Server started at http://localhost:${port}`);
         });
     })

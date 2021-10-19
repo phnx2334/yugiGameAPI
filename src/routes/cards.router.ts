@@ -16,7 +16,7 @@ cardsRouter.get("/alive", async (_req: Request, res: Response) => {
     res.status(200).send("alive");
 });
 
-cardsRouter.get("/", async (_req: Request, res: Response) => {
+cardsRouter.get("/cards", async (_req: Request, res: Response) => {
     try {
        const cards = (await collections.cards?.find({}).toArray()) as Card[];
 
@@ -26,7 +26,7 @@ cardsRouter.get("/", async (_req: Request, res: Response) => {
     }
 });
 
-cardsRouter.get("/:id", async (req: Request, res: Response) => {
+cardsRouter.get("/cards/:id", async (req: Request, res: Response) => {
     const id = req?.params?.id;
 
     try {
@@ -44,7 +44,7 @@ cardsRouter.get("/:id", async (req: Request, res: Response) => {
 
 // POST
 
-cardsRouter.post("/", async (req: Request, res: Response) => {
+cardsRouter.post("/cards", async (req: Request, res: Response) => {
     try {
         const newCard = req.body as Card;
         const result = await collections.cards?.insertOne(newCard);
@@ -60,7 +60,7 @@ cardsRouter.post("/", async (req: Request, res: Response) => {
 
 // PUT
 
-cardsRouter.put("/:id", async (req: Request, res: Response) => {
+cardsRouter.put("/cards/:id", async (req: Request, res: Response) => {
     const id = req?.params?.id;
 
     try {
@@ -80,7 +80,7 @@ cardsRouter.put("/:id", async (req: Request, res: Response) => {
 
 // DELETE
 
-cardsRouter.delete("/:id", async (req: Request, res: Response) => {
+cardsRouter.delete("/cards/:id", async (req: Request, res: Response) => {
     const id = req?.params?.id;
 
     try {
